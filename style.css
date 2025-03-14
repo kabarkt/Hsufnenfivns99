@@ -1,0 +1,159 @@
+ /* Styling widget imsakiyah */
+    .widget-container {
+        position: relative;
+        background: linear-gradient(145deg, #1e3c72, #2a5298);
+        border-radius: 20px;
+        padding: 5%;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        color: #fff;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+        margin: 0 auto;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .widget-header {
+        font-size: clamp(20px, 5vw, 26px);
+        margin-bottom: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #f1c40f;
+    }
+    .widget-datetime {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        font-size: clamp(14px, 4vw, 16px);
+    }
+    .widget-datetime span {
+        font-weight: bold;
+        color: #f1c40f;
+    }
+    .widget-select {
+        margin-bottom: 20px;
+    }
+    .widget-select select {
+        padding: 10px;
+        font-size: clamp(13px, 3.5vw, 15px);
+        border-radius: 8px;
+        background-color: #fff;
+        color: #2c3e50;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+    }
+    .time-table {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 12px;
+        font-size: clamp(13px, 3.5vw, 15px);
+    }
+    .time-item {
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 12px;
+        border-radius: 10px;
+        text-align: left;
+        transition: transform 0.2s;
+    }
+    .time-item:hover {
+        transform: scale(1.05);
+    }
+    .time-item span {
+        font-weight: bold;
+        color: #f1c40f;
+    }
+    .loading, .error {
+        font-size: clamp(14px, 4vw, 16px);
+        color: #ecf0f1;
+    }
+    /* Styling ikon embed */
+    .embed-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 6px;
+        border-radius: 50%;
+        transition: background 0.3s, transform 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .embed-icon:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.1);
+    }
+    .embed-icon svg {
+        fill: #fff;
+        width: 100%;
+        height: 100%;
+    }
+    /* Styling spoiler embed */
+    .embed-spoiler {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 10px;
+        background: linear-gradient(145deg, #ffffff, #e6e6e6);
+        color: #2c3e50;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border: 1px solid #ddd;
+        z-index: 1000;
+        font-size: 14px;
+        width: 320px;
+        text-align: left;
+        animation: slideIn 0.3s ease-out;
+    }
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .embed-spoiler.active {
+        display: block;
+    }
+    .embed-spoiler p {
+        margin: 0 0 10px;
+        font-weight: 600;
+        color: #1e3c72;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    .embed-spoiler textarea {
+        width: 100%;
+        height: 70px;
+        resize: none;
+        border: none;
+        background: #f8f9fa;
+        padding: 10px;
+        border-radius: 6px;
+        color: #2c3e50;
+        font-family: 'Courier New', monospace;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        font-size: 13px;
+    }
+    @media (max-width: 480px) {
+        .widget-container {
+            padding: 15px;
+            width: 95%;
+        }
+        .embed-spoiler {
+            width: 200px;
+            right: 10px;
+            top: 40px;
+        }
+    }
