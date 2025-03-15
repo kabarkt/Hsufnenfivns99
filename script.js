@@ -85,7 +85,7 @@
         </style>
     </div>
     <!-- Iframe -->
-    <iframe src="https://www.kabarakyat.web.id/p/imsakiah.html" width="100%" height="550" frameborder="0" onload="document.getElementById('preload').style.display='none';" style="position: relative; z-index: 1;"></iframe>
+    <iframe src="https://widget-imsakiyah-ramadhan-1446h.kabarakyat.web.id/" width="100%" height="550" frameborder="0" onload="document.getElementById('preload').style.display='none';" style="position: relative; z-index: 1;"></iframe>
 </div>`;
             embedCode.select();
             document.execCommand("copy");
